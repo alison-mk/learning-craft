@@ -1,0 +1,70 @@
+/*----HOME PAGE STYLES----*/
+
+
+.homepage-text h2 {
+  border-bottom: 0;
+  margin-bottom: 50px;
+  color: $navy;
+  text-align: center;
+  font-family: $body-font;
+  font-size: 20px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.homepage-wrapper {
+  ul {
+    padding: 0;
+  }
+}
+
+.project-tile {
+  @extend .m-all;
+  @extend .mt-1of2;
+  @extend .t-1of2;
+  @extend .d-1of3;
+  box-sizing: border-box;
+  display: inline-block;
+  padding-bottom: 15px;
+
+  a {
+    display: block;
+    position:relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 275px;
+    background-size: cover;
+    background-position: center center;
+    border: 3px solid $navy;
+    text-align: center;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+
+    h3 {
+      position:absolute;
+      bottom: 0;
+      left: -100%;
+      margin:0;
+      width:100%;
+      background-color: $navy;
+      color: #fff;
+      font-family:$header-font;
+      -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 5px 0 0;
+      letter-spacing: .04em;
+    }
+
+    &:hover,
+    &:focus {
+      text-shadow:none;
+      border: 6px solid $navy;
+
+      h3 {
+        left: 0;
+      }
+    }
+  }
+}

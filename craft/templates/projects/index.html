@@ -1,0 +1,22 @@
+{#
+ # Projects index template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+{% set title = "Projects" %}
+
+{% block content %}
+  <div class="homepage-wrapper">
+  	<h1>Projects</h1>
+
+  	{% for entry in craft.entries.section('projects').find() %}
+  		<article>
+  			<h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+  			<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+  			{{ entry.body.getPage(1) }}
+  			<p><a href="{{ entry.url }}">Continue reading</a></p>
+  		</article>
+  	{% endfor %}
+  </div>
+{% endblock %}

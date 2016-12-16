@@ -1,0 +1,50 @@
+// Project detail page styles
+.project-detail-wrapper {
+  margin: 0 auto;
+  max-width: 670px;
+
+  h2 {
+    margin-bottom: 25px;
+  }
+
+  // Give unordered lists some styles
+  ul {
+    padding-left: 40px;
+    list-style-type: disc;
+  }
+
+
+  // Call to action buttons
+  h5 a {
+    display: inline-block;
+    float: left;
+    border: 3px solid $navy;
+    background: transparent;
+    box-shadow: inset 0 0 0 0 $navy;
+    padding: 8px 10px;
+    color: $navy;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-size:16px;
+    text-align: center;
+    -webkit-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+
+    &:hover,
+    &:active,
+    &:focus {
+      box-shadow: inset 250px 0 0 0 $navy;
+      text-shadow: none;
+      color: #fff;
+    }
+  }
+
+  h5:first-child a {
+    margin-right:15px;
+  }
+
+  .footer-cta {
+    margin:0 auto;
+    max-width:318px;
+  }
+}

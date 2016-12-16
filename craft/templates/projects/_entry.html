@@ -1,0 +1,17 @@
+{#
+ # Projects entry template
+ # -------------------
+ #}
+
+{% extends "_layout" %}
+
+
+{% block content %}
+  <div class="project-detail-wrapper">
+  	<article>
+  		<h2>{{ entry.title }}</h2>
+  		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+  		{{ entry.body }}
+  	</article>
+  </div>
+{% endblock %}

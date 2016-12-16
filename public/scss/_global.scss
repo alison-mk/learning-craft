@@ -1,0 +1,312 @@
+@import url('//fonts.googleapis.com/css?family=Playfair+Display: 400,700,900');
+@import url('//fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900,100italic,400italic');
+
+$header-font: 'Playfair Display', serif;
+$body-font: 'Roboto', Arial, sans-serif;
+
+$color1: #A8EBFF;
+$color2: #FFE2E5;
+$color3: #BAEDC6;
+
+$navy: #334D70;
+$link-color: #269196;
+
+$color1-link: #269196;
+$color2-link: #D66457;
+$color3-link: #418651;
+
+/*----GENERAL SETTINGS----*/
+body {
+  background-color: $color1;
+  color: $navy;
+  font-size: 13px;
+  font-family: $body-font;
+  font-weight: 300;
+  -webkit-transition: all 4s ease;
+  transition: all 4s ease;
+
+  &.color1 {
+    background-color: $color1;
+
+    .baby-header {
+      background-color: $color1;
+    }
+
+    a {
+      color: $color1-link;
+
+      &:hover,
+      &:focus {
+        text-shadow: 0px 0px 2px $color1-link;
+      }
+    }
+  }
+
+  &.color2 {
+    background-color: $color2;
+
+    .baby-header {
+      background-color: $color2;
+    }
+
+    a {
+      color: $color2-link;
+
+      &:hover,
+      &:focus {
+        text-shadow: 0px 0px 2px $color2-link;
+      }
+    }
+  }
+
+  &.color3 {
+    background-color: $color3;
+
+    .baby-header {
+      background-color: $color3;
+    }
+
+    a {
+      color: $color3-link;
+
+      &:hover,
+      &:focus {
+        text-shadow: 0px 0px 2px $color3-link;
+      }
+    }
+  }
+}
+
+a {
+  -webkit-transition: all 1s ease, color 4s ease;
+  transition: all 1s ease, color 4s ease;
+  text-decoration: none;
+  color: $link-color;
+}
+
+a:hover,
+a:focus {
+  text-shadow: 0px 0px 2px $link-color;
+}
+
+p,
+ul li,
+ol li  {
+  line-height: 22px;
+}
+
+h1 {
+  color: $navy;
+  text-transform: uppercase;
+  font-size: 50px;
+  letter-spacing: 4px;
+  font-family: $header-font;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 25px 0 10px 0;
+  border-bottom: 2px solid $navy;
+  color: $navy;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: $header-font;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+h3 {
+  margin: 25px 0 0 0;
+  color: $navy;
+  font-size: 1.3em;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+h4 {
+  margin: 0px 0 10px 0;
+  color: $navy;
+  font-size: 1em;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+h5 {
+  color: $navy;
+  font-size: 0.9em;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+h6 {
+  color: #fff;
+  font-size: 0.8em;
+  font-family: $body-font;
+  font-weight: 400;
+}
+
+strong {
+  font-weight: 400;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+
+/*----STICKY HEADER----*/
+// Header, general styles
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  overflow: hidden;
+  text-transform: lowercase;
+
+  h1 {
+    margin: 0 auto;
+    padding: 100px 0 30px;
+    font-size: 22px;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    @media all and (min-width: 450px) {
+      font-size:28px;
+    }
+
+    @media all and (min-width: 650px) {
+      font-size: 40px;
+    }
+
+    @media all and (min-width: 750px) {
+      font-size: 50px;
+    }
+  }
+
+  h1.title a {
+    border: 3px solid $navy;
+    padding: 0 10px 3px 15px;
+    color: $navy;
+    font-weight: 700;
+
+    &:hover,
+    &:focus {
+      color: $navy;
+      text-shadow: none;
+    }
+
+    &:visited:link,
+    &:hover,
+    &:link,
+    &:active,
+    &:focus {
+      color: $navy;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+
+  ul li {
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 14px;
+    height: 14px;
+    letter-spacing: 2px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+
+    @media all and (min-width: 450px) {
+      font-size: 1.1em;
+      height: auto;
+    }
+  }
+}
+
+.main-header {
+  @extend .menu;
+}
+
+// Header when sticky
+.baby-header {
+  @extend .menu;
+  display: none;
+  height: 95px;
+  background-color: $color1;
+  -webkit-transition: all 4s ease;
+  transition: all 4s ease;
+
+  @media all and (min-width: 600px) {
+    height: 67px;
+  }
+
+  .menu-wrapper {
+    margin: 0 auto;
+    position: relative;
+
+    @media all and (min-width: 600px) {
+      width: 525px;
+    }
+  }
+
+  h1 {
+    padding: 15px 0;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+
+    @media all and (min-width: 600px) {
+      float: left;
+      text-align: left;
+    }
+  }
+
+  ul {
+    position: relative;
+    margin: 0;
+    height: 22px;
+    padding: 0;
+
+    @media all and (min-width: 600px) {
+      float: left;
+      padding: 22px 0 22px 15px;
+    }
+
+    li {
+      font-size: 1em;
+
+      @media all and (min-width: 600px) {
+        float: left;
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+// Content below header
+main {
+  margin: 0 auto;
+  padding-top: 265px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  max-width: 1040px;
+}
+
+// Content below header when sticky
+.small-header {
+  padding-top: 200px;
+}
